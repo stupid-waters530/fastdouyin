@@ -1,0 +1,26 @@
+server:
+  port: 8080
+datasource:
+  driverName: mysql
+  host: 127.0.0.1
+  port: 3306
+  database: dousheng
+  username: root
+  password: root
+  charset: utf8mb4
+video:
+  videoPath: http://192.168.0.43:8080/static/videos/
+  coverPath: http://192.168.0.43:8080/static/covers/
+  savePath: ./public
+  maxNum: 10
+redis:
+  host: 127.0.0.1
+  port: 6379
+  password:
+  db: 0
+  poolsize: 100
+logger:
+  logfilepath: ../log/log.txt
+#path:
+#  ffmpeg_path: "C:\\Program Files\\ffmpeg-5.1.2-essentials_build\\bin\\ffmpeg.exe"
+#  static_source_path: "C:\\GoWorks\\src\\fastdouyin-shliang\\static"
