@@ -68,8 +68,12 @@ func PublishList(c *gin.Context) {
 		uid = 0
 	}
 	uid = claims.UserId
+	fmt.Println(uid)
+	var hisUId int64
+	hisuid := c.Query("user_id")
+	hisUId, _ = strconv.ParseInt(hisuid, 10, 64)
 	//fmt.Println("PublishList获取数据uid：" + strconv.FormatInt(uid, 10))
-	videoFeed, err := service.PublishList(uid)
+	videoFeed, err := service.PublishList(hisUId)
 	fmt.Printf("得到%d个视频\n", len(videoFeed))
 	//fmt.Print(videoFeed[0].PlayUrl + "\n")
 	if err != nil {
